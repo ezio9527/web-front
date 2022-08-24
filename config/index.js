@@ -12,15 +12,15 @@ module.exports = {
         assetsPublicPath: '/',
         proxyTable: {
             '/uc':{
-                target: 'http://8.210.75.138:6001/',
+                target: 'http://198.44.249.212:6001/',
                 secure: false
             },
             '/swap':{
-                target: 'http://8.210.75.138:6012/',
+                target: 'http://198.44.249.212:6012/',
                 secure: false
             },
             '/market':{
-                target: 'http://8.210.75.138:6004/',
+                target: 'http://198.44.249.212:6004/',
                 secure: false
             }
         },
