@@ -24,9 +24,11 @@ Vue.use(vueResource);
 Vue.use(VueI18n);
 
 // Vue.prototype.rootHost = "https://www.bihuo.exchange";
-Vue.prototype.rootHost = "https://api.bihuo.exchange";
+// Vue.prototype.rootHost = "http://47.242.181.210";
 // Vue.prototype.host = "https://api.bihuo.exchange";
-Vue.prototype.host = "https://api.bihuo.exchange";
+// Vue.prototype.host = "http://47.242.181.210";
+Vue.prototype.rootHost = "";
+Vue.prototype.host = "";
 
 Vue.prototype.api = Api;
 Vue.http.options.credentials = true;
