@@ -1322,7 +1322,8 @@
             email: '邮箱地址',
             agreementtip: '请点击同意',
             modaltitle: '请校验',
-            promotion: '邀请码(选填)'
+            promotion: '邀请码(必填)',
+            promotionTips: '请输入邀请码'
         },
         safe: {
             safelevel_low: '安全等级：低',

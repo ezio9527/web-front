@@ -1306,7 +1306,8 @@ module.exports = {
                     email: "郵箱地址",
                     agreementtip: "請點擊同意",
                     modaltitle: "請校驗",
-                    promotion: "邀請碼(選填)"
+                    promotion: "邀請碼(選填)",
+                    promotionTips: '請輸入邀請碼'
                 },
                 safe: {
                     safelevel_low: "安全等級：低",

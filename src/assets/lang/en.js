@@ -1313,7 +1313,8 @@ module.exports = {
             email: 'Email',
             agreementtip: 'Click to agree',
             modaltitle: 'Please verification',
-            promotion: 'Invite Code(Optional)'
+            promotion: 'Invite Code(Optional)',
+            promotionTips: 'Enter Invite Code'
         },
         safe: {
             safelevel_low: 'Security Level: Low',

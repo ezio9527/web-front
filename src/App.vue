@@ -23,9 +23,9 @@
                   <router-link to="/">
                     <MenuItem name="nav-index">{{$t("header.index")}}</MenuItem>
                   </router-link>
-                  <router-link to="/exchange">
-                    <MenuItem name="nav-exchange">{{$t("header.exchange")}}</MenuItem>
-                  </router-link>
+                  <!--<router-link to="/exchange">-->
+                  <!--  <MenuItem name="nav-exchange">{{$t("header.exchange")}}</MenuItem>-->
+                  <!--</router-link>-->
                   <router-link to="/swap">
                     <MenuItem name="nav-swap">{{$t("header.swap1")}}</MenuItem>
                   </router-link>
@@ -2343,7 +2343,7 @@ fieldset[disabled] .ivu-input {
   .page-content {
     padding-bottom: 0!important;
     .time_download {
-      
+
     }
     .layout {
       display: none!important;

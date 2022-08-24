@@ -318,7 +318,14 @@ export default {
             trigger: "blur"
           }
         ],
-        repassword: [{ validator: validateRepassword, trigger: "blur" }]
+        repassword: [{ validator: validateRepassword, trigger: "blur" }],
+        promotion: [
+          {
+            required: true,
+            message: this.$t("uc.regist.promotionTips"),
+            trigger: "blur"
+          }
+        ]
       },
       key: "",
       code: ""
