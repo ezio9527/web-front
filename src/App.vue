@@ -23,21 +23,21 @@
                   <router-link to="/">
                     <MenuItem name="nav-index">{{$t("header.index")}}</MenuItem>
                   </router-link>
-                  <!--<router-link to="/exchange">-->
-                  <!--  <MenuItem name="nav-exchange">{{$t("header.exchange")}}</MenuItem>-->
-                  <!--</router-link>-->
+                  <router-link to="/exchange">
+                    <MenuItem name="nav-exchange">{{$t("header.exchange")}}</MenuItem>
+                  </router-link>
                   <router-link to="/swap">
                     <MenuItem name="nav-swap">{{$t("header.swap1")}}</MenuItem>
                   </router-link>
-                  <router-link to="/exchange" style="display: none;">
-                    <MenuItem name="nav-swapexchange">{{$t("header.swap2")}}</MenuItem>
-                  </router-link>
-                  <router-link to="/exchange" style="display: none;">
-                    <MenuItem name="nav-swapcfd">{{$t("header.swap3")}}</MenuItem>
-                  </router-link>
-                  <router-link to="/exchange" style="display: none;">
-                    <MenuItem name="nav-swapsecond">{{$t("header.swap4")}}</MenuItem>
-                  </router-link>
+                  <!--<router-link to="/exchange">-->
+                  <!--  <MenuItem name="nav-swapexchange">{{$t("header.swap2")}}</MenuItem>-->
+                  <!--</router-link>-->
+                  <!--<router-link to="/exchange">-->
+                  <!--  <MenuItem name="nav-swapcfd">{{$t("header.swap3")}}</MenuItem>-->
+                  <!--</router-link>-->
+                  <!--<router-link to="/exchange">-->
+                  <!--  <MenuItem name="nav-swapsecond">{{$t("header.swap4")}}</MenuItem>-->
+                  <!--</router-link>-->
                   <!--<router-link to="/ctc">-->
                   <!--  <MenuItem name="nav-ctc">{{$t("header.ctc")}}</MenuItem>-->
                   <!--</router-link>-->
@@ -56,12 +56,12 @@
                   <!--<router-link to="/news">-->
                   <!--  <MenuItem name="nav-news">{{$t("header.news")}}</MenuItem>-->
                   <!--</router-link>-->
-                  <router-link to="/lab">
-                    <MenuItem name="nav-launchpad">{{$t("header.launchpad")}}</MenuItem>
-                  </router-link>
-                  <a href="javascript:void(0);">
-                    <MenuItem name="nav-b2b">{{$t("header.b2b")}}</MenuItem>
-                  </a>
+                  <!--<router-link to="/lab">-->
+                  <!--  <MenuItem name="nav-launchpad">{{$t("header.launchpad")}}</MenuItem>-->
+                  <!--</router-link>-->
+                  <!--<a href="javascript:void(0);">-->
+                  <!--  <MenuItem name="nav-b2b">{{$t("header.b2b")}}</MenuItem>-->
+                  <!--</a>-->
                   <router-link to="/invite">
                     <MenuItem name="nav-community">{{$t("header.community")}}</MenuItem>
                   </router-link>
