@@ -181,9 +181,9 @@
               <MenuItem name="1-1">
               <router-link to="/uc/safe">{{$t('uc.member.securitysetting')}}</router-link>
               </MenuItem>
-              <MenuItem name="1-2">
-              <router-link to="/uc/account">{{$t('uc.member.accountsetting')}}</router-link>
-              </MenuItem>
+              <!--<MenuItem name="1-2">-->
+              <!--<router-link to="/uc/account">{{$t('uc.member.accountsetting')}}</router-link>-->
+              <!--</MenuItem>-->
             </Submenu>
             <Submenu name="2">
               <template slot="title">

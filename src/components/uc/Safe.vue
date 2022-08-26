@@ -63,7 +63,7 @@
                                             <Input v-model="formValidate6.idCard" size="large"></Input>
                                         </FormItem>
                                         <div style="height:250px;">
-                                            <Col span="8">
+                                            <Col span="12">
                                             <input type="hidden" name="imgPreview" :value="imgPreview" />
                                             <div class="idcard-title">{{$t('uc.safe.upload_positive')}}</div>
                                             <img id="frontCardImg" style="width: 180px;height: 120px;" :src="frontCardImg">
@@ -73,7 +73,7 @@
                                                 </Upload>
                                             </div>
                                             </Col>
-                                            <Col span="8">
+                                            <Col span="12">
                                             <input type="hidden" name="imgNext" :value="imgNext" />
                                             <div class="idcard-title">{{$t('uc.safe.upload_negative')}}</div>
                                             <img id="backCardImg" style="width: 180px;height: 120px;" :src="backCardImg">
@@ -83,21 +83,21 @@
                                                 </Upload>
                                             </div>
                                             </Col>
-                                            <Col span="8">
-                                            <input type="hidden" name="imgLast" :value="imgLast" />
-                                            <div class="idcard-title">{{$t('uc.safe.upload_hand')}}</div>
-                                            <img id="handCardImg" style="width: 180px;height: 120px;" :src="handCardImg">
-                                            <div class="acc_sc">
-                                                <Upload ref="upload3" :before-upload="beforeUpload" :on-success="handHandleSuccess" :headers="uploadHeaders" :action="uploadUrl">
-                                                    <Button icon="ios-cloud-upload-outline">{{$t('uc.safe.upload')}}</Button>
-                                                </Upload>
-                                            </div>
-                                            </Col>
+                                            <!--<Col span="8">-->
+                                            <!--<input type="hidden" name="imgLast" :value="imgLast" />-->
+                                            <!--<div class="idcard-title">{{$t('uc.safe.upload_hand')}}</div>-->
+                                            <!--<img id="handCardImg" style="width: 180px;height: 120px;" :src="handCardImg">-->
+                                            <!--<div class="acc_sc">-->
+                                            <!--    <Upload ref="upload3" :before-upload="beforeUpload" :on-success="handHandleSuccess" :headers="uploadHeaders" :action="uploadUrl">-->
+                                            <!--        <Button icon="ios-cloud-upload-outline">{{$t('uc.safe.upload')}}</Button>-->
+                                            <!--    </Upload>-->
+                                            <!--</div>-->
+                                            <!--</Col>-->
                                         </div>
                                         <div class="idcard-desc">
                                             <p>{{$t('uc.safe.idcard_verifymsg1')}}</p>
                                             <p>{{$t('uc.safe.idcard_verifymsg2')}}</p>
-                                            <p>{{$t('uc.safe.idcard_verifymsg3')}}</p>
+                                            <!--<p>{{$t('uc.safe.idcard_verifymsg3')}}</p>-->
                                         </div>
                                         <!-- Button -->
                                         <FormItem style="text-align:center;">
@@ -740,16 +740,16 @@ export default {
           this.$Message.error(this.$t("uc.safe.upload_negativetip"));
           return false;
         }
-        if (this.imgLast == "") {
-          this.$Message.error(this.$t("uc.safe.upload_handtip"));
-          return false;
-        }
+        // if (this.imgLast == "") {
+        //   this.$Message.error(this.$t("uc.safe.upload_handtip"));
+        //   return false;
+        // }
         let param = {};
         param["realName"] = this.formValidate6.realName;
         param["idCard"] = this.formValidate6.idCard;
         param["idCardFront"] = this.imgPreview;
         param["idCardBack"] = this.imgNext;
-        param["handHeldIdCard"] = this.imgLast;
+        // param["handHeldIdCard"] = this.imgLast;
         this.$http
           .post(this.host + "/uc/approve/real/name", param)
           .then(response => {

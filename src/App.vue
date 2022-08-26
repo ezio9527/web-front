@@ -285,7 +285,7 @@
               <poptip width="200" trigger="hover" placement="right">
                 <a href="javascript:;" class="wechat">{{$t("footer.kolhz")}}</a>
                 <div slot="content">
-                  <p style="text-align:center;">kol@bihuo.exchange</p>
+                  <p style="text-align:center;">bihuogf@gmail.com</p>
                 </div>
               </poptip>
             </li>
@@ -293,7 +293,7 @@
               <poptip width="200" trigger="hover" placement="right">
                 <a href="javascript:;" class="wechat">{{$t("footer.mthz")}}</a>
                 <div slot="content">
-                  <p style="text-align:center;">media@bihuo.exchange</p>
+                  <p style="text-align:center;">bihuogf@gmail.com</p>
                 </div>
               </poptip>
             </li>
@@ -301,38 +301,38 @@
               <poptip width="200" trigger="hover" placement="right">
                 <a href="javascript:;" class="wechat">{{$t("footer.tsyjy")}}</a>
                 <div slot="content">
-                  <p style="text-align:center;">suggest@bihuo.exchange</p>
+                  <p style="text-align:center;">bihuogf@gmail.com</p>
                 </div>
               </poptip>
             </li>
           </ul>
-          <ul>
-            <li class="footer_title">
-              <span>{{$t("footer.sq")}}</span>
-            </li>
-            <li style="display: flex">
-                <div style="margin-right: 8px">
-                  <a target="_blank" href="https://t.me/+eYCFfgnXYVUxMDg9">
-                    <img style="width: 20px" src="./assets/icon1/sq1.png" alt="">
-                  </a>
-                </div>
-                <div style="margin-right: 8px">
-                  <a target="_blank" href="https://discord.gg/YkCHvdEw7G">
-                    <img style="width: 20px" src="./assets/icon1/sq2.png" alt="">
-                  </a>
-                </div>
-                <div style="margin-right: 8px">
-                  <a target="_blank" href="https://twitter.com/BihuoExchange">
-                    <img style="width: 20px" src="./assets/icon1/sq3.png" alt="">
-                  </a>
-                </div>
-                <div style="margin-right: 8px">
-                  <a target="_blank" href="https://www.instagram.com/bihuoexchange">
-                    <img style="width: 20px" src="./assets/icon1/sq4.png" alt="">
-                  </a>
-                </div>
-            </li>
-          </ul>
+          <!--<ul>-->
+          <!--  <li class="footer_title">-->
+          <!--    <span>{{$t("footer.sq")}}</span>-->
+          <!--  </li>-->
+          <!--  <li style="display: flex">-->
+          <!--      <div style="margin-right: 8px">-->
+          <!--        <a target="_blank" href="https://t.me/+eYCFfgnXYVUxMDg9">-->
+          <!--          <img style="width: 20px" src="./assets/icon1/sq1.png" alt="">-->
+          <!--        </a>-->
+          <!--      </div>-->
+          <!--      <div style="margin-right: 8px">-->
+          <!--        <a target="_blank" href="https://discord.gg/YkCHvdEw7G">-->
+          <!--          <img style="width: 20px" src="./assets/icon1/sq2.png" alt="">-->
+          <!--        </a>-->
+          <!--      </div>-->
+          <!--      <div style="margin-right: 8px">-->
+          <!--        <a target="_blank" href="https://twitter.com/BihuoExchange">-->
+          <!--          <img style="width: 20px" src="./assets/icon1/sq3.png" alt="">-->
+          <!--        </a>-->
+          <!--      </div>-->
+          <!--      <div style="margin-right: 8px">-->
+          <!--        <a target="_blank" href="https://www.instagram.com/bihuoexchange">-->
+          <!--          <img style="width: 20px" src="./assets/icon1/sq4.png" alt="">-->
+          <!--        </a>-->
+          <!--      </div>-->
+          <!--  </li>-->
+          <!--</ul>-->
         </div>
       </div>
 
