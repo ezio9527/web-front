@@ -1177,8 +1177,9 @@ module.exports = {
                         status: "狀態",
                         protocolerr: '請選擇協議',
                         network: '網絡',
-                        notaddress: "您未申請過充值地址，請點擊按鈕獲取充值地址",
+                        notaddress: "未獲取到充值地址",
                         rechargeDisable: '充值功能暫時不可用',
+                        uploadImg: '上傳充值截圖',
                     },
                     withdraw: {
                         network: '轉賬網絡',

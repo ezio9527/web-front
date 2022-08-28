@@ -1183,6 +1183,7 @@ module.exports = {
                         network: '通信網',
                         notaddress: "リチャージアドレスを申請していない場合は、ボタンをクリックしてリチャージアドレスを取得してください。",
                         rechargeDisable: '充電機能は一時的に利用できません',
+                        uploadImg: 'チャージショットをアップする ',
                     },
                     withdraw: {
                         network: '送金ネットワーク',

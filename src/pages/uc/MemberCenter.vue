@@ -245,31 +245,31 @@
               <!--<router-link to="/uc/promotion/mycards">{{$t('uc.promotion.subtitle1')}}</router-link>-->
               <!--</MenuItem>-->
             </Submenu>
-            <Submenu name="6">
-              <template slot="title">
-                <span class="isclick"></span>
-                <span class="content">{{$t('uc.activity.navTitle')}}</span>
-              </template>
-              <MenuItem name="6-1">
-              <router-link to="/uc/innovation/myorders">{{$t('uc.activity.subNavTitle1')}}</router-link>
-              </MenuItem>
-              <MenuItem name="6-2">
-              <router-link to="/uc/innovation/myminings">{{$t('uc.activity.subNavTitle2')}}</router-link>
-              </MenuItem>
-              <MenuItem name="6-3">
-              <router-link to="/uc/innovation/mylocked">{{$t('uc.activity.subNavTitle3')}}</router-link>
-              </MenuItem>
-            </Submenu>
+            <!--<Submenu name="6">-->
+            <!--  <template slot="title">-->
+            <!--    <span class="isclick"></span>-->
+            <!--    <span class="content">{{$t('uc.activity.navTitle')}}</span>-->
+            <!--  </template>-->
+            <!--  <MenuItem name="6-1">-->
+            <!--  <router-link to="/uc/innovation/myorders">{{$t('uc.activity.subNavTitle1')}}</router-link>-->
+            <!--  </MenuItem>-->
+            <!--  <MenuItem name="6-2">-->
+            <!--  <router-link to="/uc/innovation/myminings">{{$t('uc.activity.subNavTitle2')}}</router-link>-->
+            <!--  </MenuItem>-->
+            <!--  <MenuItem name="6-3">-->
+            <!--  <router-link to="/uc/innovation/mylocked">{{$t('uc.activity.subNavTitle3')}}</router-link>-->
+            <!--  </MenuItem>-->
+            <!--</Submenu>-->
 
-            <Submenu name="7">
-                <template slot="title">
-                    <span class="isclick"></span>
-                    <span class="content">{{$t("uc.api.apiAdmin")}}</span>
-                </template>
-                <MenuItem name="7-1">
-                <router-link to="/uc/apiManage">{{$t("uc.api.apiAdmin")}}</router-link>
-                </MenuItem>
-            </Submenu>
+            <!--<Submenu name="7">-->
+            <!--    <template slot="title">-->
+            <!--        <span class="isclick"></span>-->
+            <!--        <span class="content">{{$t("uc.api.apiAdmin")}}</span>-->
+            <!--    </template>-->
+            <!--    <MenuItem name="7-1">-->
+            <!--    <router-link to="/uc/apiManage">{{$t("uc.api.apiAdmin")}}</router-link>-->
+            <!--    </MenuItem>-->
+            <!--</Submenu>-->
           </Menu>
         </Col>
         <Col :xs="24" :sm="24" :md="20" :lg="20">

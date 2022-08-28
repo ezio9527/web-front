@@ -1193,8 +1193,9 @@
                 status_2: '已到账',
                 protocolerr: '请选择协议',
                 network: '网络',
-                notaddress: "您未申请过充值地址，请点击按钮获取充值地址",
+                notaddress: "未获取到充值地址",
                 rechargeDisable: '充值功能暂时不可用',
+                uploadImg: '上传充值截图',
             },
             withdraw: {
                 network: '转账网络',

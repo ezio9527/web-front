@@ -42,24 +42,25 @@
                     </div>
                   </div> -->
                   <template v-if="coinextItem.isrecharge !== 0">
-                    <div class="address-data-cont" v-if="qrcode.value">
-                      <span>{{ qrcode.value }}</span>
-                      <a v-clipboard:copy="qrcode.value" v-clipboard:success="onCopy" v-clipboard:error="onError"
-                         href="javascript:;" id="copyBtn" class="link-copy">{{ $t('uc.finance.recharge.copy') }}</a>
-                      <div class="code-cont">
-                        <img class="code-icon" src="../../assets/img/619f4cbcb561f7267614e1c3a252e28.png">
-                        <div class="code">
-                          <qriously :value="qrcode.value" :size="qrcode.size"/>
+                    <template v-if="qrcode.value">
+                      <div class="address-data-cont">
+                        <span>{{ qrcode.value }}</span>
+                        <a v-clipboard:copy="qrcode.value" v-clipboard:success="onCopy" v-clipboard:error="onError"
+                           href="javascript:;" id="copyBtn" class="link-copy">{{ $t('uc.finance.recharge.copy') }}</a>
+                        <div class="code-cont">
+                          <img class="code-icon" src="../../assets/img/619f4cbcb561f7267614e1c3a252e28.png">
+                          <div class="code">
+                            <qriously :value="qrcode.value" :size="qrcode.size"/>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                      <Upload ref="upload" :before-upload="beforeUpload" :on-success="handleSuccess" :headers="uploadHeaders" :action="uploadUrl" style="margin-top: 20px">
+                        <Button icon="ios-cloud-upload-outline">{{$t('uc.finance.recharge.uploadImg')}}</Button>
+                      </Upload>
+                    </template>
                     <div v-else
                          style="text-align: center;width: 300px;display: flex;flex-direction: column;align-items: center">
                       <div style="font-size: 12px;">{{ $t('uc.finance.recharge.notaddress') }}</div>
-                      <div
-                          style="cursor: pointer;padding: 2px;font-size: 13px;margin-top: 5px;background-color: #f0ac19;width: 100px;border-radius: 4px;"
-                          @click="resetAddress">{{ $t('uc.finance.recharge.getaddress') }}
-                      </div>
 
                     </div>
                   </template>
@@ -145,12 +146,15 @@ import {parseTime} from "../../assets/js/util";
 Vue.use(VueQriously);
 
 export default {
+  name: 'RechargeView',
   components: {
     VueQriously
   },
   inject: ['reload'],
   data() {
     return {
+      uploadHeaders: { "x-auth-token": localStorage.getItem("TOKEN") },
+      uploadUrl: this.host + "/uc/upload/oss/image",
       modal1: false,
       modal2: false,
       withdrawCode: "",
@@ -160,12 +164,7 @@ export default {
       minRechargeAmount: "0.001",
       isShowGetAddress: false,
       isShowEwm: false,
-      qrcode: {
-        value: "",
-        size: 220,
-        coinName: "",
-        unit: ""
-      },
+      allWalletAddress: [],
       coinType: "",
       protocol: "",
       coinList: [],
@@ -186,6 +185,23 @@ export default {
     };
   },
   methods: {
+    beforeUpload (data) {
+      if (data && data.size >= 1024000 * 2) {
+        this.$Message.error("上传图片大小不能超过2M");
+        return false;
+      }
+      if (this.$refs.upload.fileList.length > 0) {
+        this.$refs.upload.clearFiles()
+      }
+    },
+    handleSuccess (res, file,fileList) {
+      if (res.code == 0) {
+        this.$http.post(this.host + "uc/recharge/add/image", {rechargeImageUrl: res.data}).then(response => {
+        });
+      } else {
+        this.$Message.error(res.message);
+      }
+    },
     changePage(index) {
       this.pageNo = index
       this.getList();
@@ -203,7 +219,7 @@ export default {
     },
     changeCoin() {
       this.protocol = ""
-      this.qrcode.value = ""
+      // this.qrcode.value = ""
       this.coinextItem = {}
     },
     changeCoinext() {
@@ -221,19 +237,19 @@ export default {
       if (this.coinextItem.isrecharge === 0) {
         return false
       }
-      this.qrcode.value = ""
-      this.createAddressLoading = true
-      this.$http
-          .get(this.host + "/uc/address/read?coinprotocol=" + this.protocol)
-          .then(response => {
-            var resp = response.body;
-            this.createAddressLoading = false
-            if (resp.code == 0) {
-              this.qrcode.value = resp.data.address
-            } else {
-              this.$Message.error(resp.message);
-            }
-          });
+      // this.qrcode.value = ""
+      // this.createAddressLoading = true
+      // this.$http
+      //     .get(this.host + "/uc/address/read?coinprotocol=" + this.protocol)
+      //     .then(response => {
+      //       var resp = response.body;
+      //       this.createAddressLoading = false
+      //       if (resp.code == 0) {
+      //         this.qrcode.value = resp.data.address
+      //       } else {
+      //         this.$Message.error(resp.message);
+      //       }
+      //     });
     },
     openCodeModal() {
       this.modal1 = true;
@@ -355,8 +371,32 @@ export default {
     //this.getMember();
     this.getCoinList()
     this.getList();
+    this.$http.get(this.host + "/uc/walletaddress/findAll").then(response => {
+      this.allWalletAddress = response.body.data
+      console.log(response.body.data)
+    });
   },
   computed: {
+    qrcode () {
+      const wallet = this.allWalletAddress.filter(item => {
+        return item.coinname === this.coinType && item.protocol === this.protocol
+      })
+      if (wallet.length > 0) {
+        return {
+          value: wallet[0].address,
+          size: 220,
+          coinName: wallet[0].coinname,
+          unit: ""
+        }
+      } else {
+        return {
+          value: "",
+          size: 220,
+          coinName: "",
+          unit: ""
+        }
+      }
+    },
     tableColumnsRecharge() {
       let columns = [];
       columns.push({

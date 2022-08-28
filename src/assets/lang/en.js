@@ -1184,8 +1184,9 @@ module.exports = {
                 status: "Status",
                 protocolerr: 'Choice Choice',
                 network: 'Network',
-                notaddress: "You have not applied for the recharge address, please click the button to obtain the recharge address",
+                notaddress: "Not recharge address",
                 rechargeDisable: 'The recharge function is temporarily unavailable',
+                uploadImg: 'Upload recharge screenshot',
             },
             withdraw: {
                 network: 'Transfer network',
