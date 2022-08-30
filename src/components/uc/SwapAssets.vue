@@ -98,7 +98,7 @@ export default {
       this.$http.post(this.host + "/swap/wallet/list").then(response => {
         var resp = response.body;
         if (resp.code == 0) {
-          this.tableMoney = resp.data;
+          this.tableMoney = resp.data.walletList;
           for (let i = 0; i < this.tableMoney.length; i++) {
             this.tableMoney[i]["symbol"] = this.tableMoney[i].contractCoin.symbol;
             // 如果是全仓并且收益小于0

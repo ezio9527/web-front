@@ -383,25 +383,25 @@ export default {
     activeNav: function() {
       switch (this.activeNav) {
         case "nav-exchange":
-          window.document.title = (this.lang == "简体中文" ? "交易中心" : "Exchange") + " - Bihuo | Bihuo | 全球比特币交易平台 | 全球数字货币交易平台";
+          window.document.title = (this.lang == "简体中文" ? "交易中心" : "Exchange") + " - Bihuo | Bihuo | Global currency trading platform | global digital currency trading platform";
           break;
         case "nav-service":
-          window.document.title = (this.lang == "简体中文" ? "公告" : "Announcement") + " - Bihuo | Bihuo | 全球比特币交易平台 | 全球数字货币交易平台";
+          window.document.title = (this.lang == "简体中文" ? "公告" : "Announcement") + " - Bihuo | Bihuo | Global currency trading platform | global digital currency trading platform";
           break;
         case "nav-about":
-          window.document.title = (this.lang == "简体中文" ? "关于" : "About") + " - Bihuo | Bihuo | 全球比特币交易平台 | 全球数字货币交易平台";
+          window.document.title = (this.lang == "简体中文" ? "关于" : "About") + " - Bihuo | Bihuo | Global currency trading platform | global digital currency trading platform";
           break;
         case "nav-lab":
-          window.document.title = (this.lang == "简体中文" ? "创新实验室" : "Lab") + " - Bihuo | Bihuo | 全球比特币交易平台 | 全球数字货币交易平台";
+          window.document.title = (this.lang == "简体中文" ? "创新实验室" : "Lab") + " - Bihuo | Bihuo | Global currency trading platform | global digital currency trading platform";
           break;
         case "nav-invite":
-          window.document.title = (this.lang == "简体中文" ? "推广合伙人" : "Promotion") + " - Bihuo | Bihuo | 全球比特币交易平台 | 全球数字货币交易平台";
+          window.document.title = (this.lang == "简体中文" ? "推广合伙人" : "Promotion") + " - Bihuo | Bihuo | Global currency trading platform | global digital currency trading platform";
           break;
 	case "nav-cexchange":
-          window.document.title = (this.lang == "简体中文" ? "活动" : "Activity") + " - Bihuo | 全球比特币交易平台 | 全球数字货币交易平台";
+          window.document.title = (this.lang == "简体中文" ? "活动" : "Activity") + " - Bihuo | Global currency trading platform | global digital currency trading platform";
           break;
         default:
-          window.document.title = "Bihuo | 币火官网 - 全球优质数字资产交易平台 | 开启交易旅程";
+          window.document.title = "Bihuo | Bihuo Home  - global high-quality digital assets | open trading platform trading journey";
           break;
       }
     },
