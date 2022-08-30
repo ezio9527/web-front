@@ -239,9 +239,9 @@
             <li>
               <router-link target="_blank" to="/helplist?cate=6">{{$t("footer.jrwm")}}</router-link>
             </li>
-            <li>
-              <router-link target="_blank" to="/helplist?cate=0">{{$t("footer.feilv")}}</router-link>
-            </li>
+            <!--<li>-->
+            <!--  <router-link target="_blank" to="/helplist?cate=0">{{$t("footer.feilv")}}</router-link>-->
+            <!--</li>-->
             <li>
               <router-link target="_blank" to="/helplist?cate=5">{{$t("footer.fwtk")}}</router-link>
             </li>

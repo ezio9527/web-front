@@ -18,7 +18,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="section" id="page1">
         <!-- <div v-if="lang==='简体中文'"> -->
 
@@ -1684,13 +1684,13 @@ export default {
     width: 480px;
     float: left;
     height: 100%;
-    background: url("../../assets/images/mockup.png") no-repeat left 0px;
+    //background: url("../../assets/images/mockup.png") no-repeat left 0px;
     background-size: 480px;
   }
   .download-data {
   	width: 620px;padding-bottom: 50px;margin-left: 30px;
   	// border: 1px solid red;
-  
+
   	.tips-title {
   		width: 100%;
   		text-align: center;
@@ -1698,14 +1698,14 @@ export default {
   		font-size: 25px;
   		padding: 0px 0px 20px;
   	}
-  
+
   	.tips-tetx {
   		width: 100%;
   		color: #FFFFFF;
   		font-size: 20px;text-align: center;
   		line-height: 28px;
   	}
-  
+
   	.code-cont {
   		width: 100%;
   		display: flex;
@@ -1713,7 +1713,7 @@ export default {
   		justify-content: space-between;
   		margin-top: 60px;
   		padding: 0px 50px;
-  
+
   		.code-item {
   			width: 200px;
   			height: 200px;

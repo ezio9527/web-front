@@ -60,7 +60,7 @@ router.afterEach((to,from,next) => {
 });
 
 const i18n = new VueI18n({
-    locale: 'zh',
+    locale: 'en',
     messages: {
         'zh': require('./assets/lang/zh.js'),
         'en': require('./assets/lang/en.js'),
