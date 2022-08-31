@@ -912,7 +912,7 @@
             register: '注册',
             login: '登录',
             welcomelogin: '欢迎登录',
-            usertip: '请输入手机号或邮箱',
+            usertip: '请输入邮箱',
             pwdtip: '请输入密码',
             validatecodeload: '正在加载验证码',
             validatemsg: '请先完成验证',

@@ -42,7 +42,7 @@
         </div>
       </div>
     </div>
-    <p class="headertip">* {{$t('invite.headertip')}}</p>
+    <!--<p class="headertip">* {{$t('invite.headertip')}}</p>-->
     <!--<div class="main">-->
     <!--  <div class="invite-content">-->
     <!--    <h2>{{$t('invite.ruledetail')}}</h2>-->

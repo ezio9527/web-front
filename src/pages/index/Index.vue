@@ -181,12 +181,12 @@
           </div>
           <div style="text-align: center;margin-top: 5px;">Android</div>
         </div>
-        <div>
-          <div class="code-item">
-            <vue-qr :text="iosDownloadUrl" :size="200"></vue-qr>
-          </div>
-          <div style="text-align: center;margin-top: 5px;">iOS</div>
-        </div>
+        <!--<div>-->
+        <!--  <div class="code-item">-->
+        <!--    <vue-qr :text="iosDownloadUrl" :size="200"></vue-qr>-->
+        <!--  </div>-->
+        <!--  <div style="text-align: center;margin-top: 5px;">iOS</div>-->
+        <!--</div>-->
 			</div>
 		</div>
         <!-- <ul class="download">

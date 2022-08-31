@@ -155,59 +155,59 @@
                             </div>
                         </div>
                         <!-- 3 -->
-                        <div class="account-item">
-                            <div class="account-item-in">
-                                <Icon type="ios-call" color="#00b5f6" size="20"/>
-                                <span class="card-number">{{$t('uc.safe.phone')}}</span>
-                                <p v-if="user.phoneVerified==1" class="bankInfo" style="color: #fff;font-size: 13px;">
-                                    {{user.mobilePhone}}
-                                </p>
-                                <p v-else class="bankInfo" style="color: #828ea1;font-size: 13px;">
-                                    {{$t('uc.safe.bindphone')}}
-                                </p>
-                                <span v-if="user.phoneVerified==1">{{$t('uc.safe.binded')}}</span>
-                                <a v-else class="btn" @click="showItem(3)">{{$t('uc.safe.bind')}}</a>
-                            </div>
-                            <div class="account-detail" v-show="choseItem==3">
-                                <div class="detail-list">
-                                    <Form ref="formValidate3" :model="formValidate3" :rules="ruleValidate" :label-width="110">
-                                        <!-- 手机 -->
-                                        <FormItem :label="$t('uc.safe.phone')" prop="mobile">
-                                            <Input v-model="formValidate3.mobile" size="large">
-                                              <Select v-model="country" slot="prepend" style="width: 80px;border:1px solid #27313e;">
-                                                  <Option v-for="(area,index) in areas" :key="index"  :value="area.zhName" :label="'+' + area.areaCode">
-                                                    <span style="text-align:right;display:inline-block;width:30px;">+{{area.areaCode}}</span>
-                                                    <span style="text-align:left;display:inline-block;margin-left:10px;color:#ccc;width:80px;" v-if="lang=='简体中文'">{{area.zhName}}</span>
-                                                    <span style="text-align:left;display:inline-block;margin-left:10px;color:#ccc;width:80px;" v-else>{{area.enName}}</span>
-                                                  </Option>
-                                              </Select>
-                                            </Input>
-                                        </FormItem>
-                                        <!-- 登录密码 -->
-                                        <FormItem :label="$t('uc.safe.loginpwd')" prop="password">
-                                            <Input v-model="formValidate3.password" size="large" type="password"></Input>
-                                        </FormItem>
-                                        <!-- 手机验证码 -->
-                                        <FormItem :label="$t('uc.safe.phonecode')" prop="vailCode2">
-                                            <Input v-model="formValidate3.vailCode2" size="large">
-                                            <!-- <Button slot="append">点击获取</Button> -->
-                                            <div class="timebox" slot="append">
-                                                <Button @click="send(2)" :disabled="sendMsgDisabled2">
-                                                    <span v-if="sendMsgDisabled2">{{time2+$t('uc.safe.second')}}</span>
-                                                    <span v-if="!sendMsgDisabled2">{{$t('uc.safe.clickget')}}</span>
-                                                </Button>
-                                            </div>
-                                            </Input>
-                                        </FormItem>
-                                        <!-- Button -->
-                                        <FormItem>
-                                            <Button type="warning" @click="handleSubmit('formValidate3')">{{$t('uc.safe.save')}}</Button>
-                                            <Button @click="handleReset('formValidate3')" style="margin-left: 8px">{{$t('uc.safe.reset')}}</Button>
-                                        </FormItem>
-                                    </Form>
-                                </div>
-                            </div>
-                        </div>
+                        <!--<div class="account-item">-->
+                        <!--    <div class="account-item-in">-->
+                        <!--        <Icon type="ios-call" color="#00b5f6" size="20"/>-->
+                        <!--        <span class="card-number">{{$t('uc.safe.phone')}}</span>-->
+                        <!--        <p v-if="user.phoneVerified==1" class="bankInfo" style="color: #fff;font-size: 13px;">-->
+                        <!--            {{user.mobilePhone}}-->
+                        <!--        </p>-->
+                        <!--        <p v-else class="bankInfo" style="color: #828ea1;font-size: 13px;">-->
+                        <!--            {{$t('uc.safe.bindphone')}}-->
+                        <!--        </p>-->
+                        <!--        <span v-if="user.phoneVerified==1">{{$t('uc.safe.binded')}}</span>-->
+                        <!--        <a v-else class="btn" @click="showItem(3)">{{$t('uc.safe.bind')}}</a>-->
+                        <!--    </div>-->
+                        <!--    <div class="account-detail" v-show="choseItem==3">-->
+                        <!--        <div class="detail-list">-->
+                        <!--            <Form ref="formValidate3" :model="formValidate3" :rules="ruleValidate" :label-width="110">-->
+                        <!--                &lt;!&ndash; 手机 &ndash;&gt;-->
+                        <!--                <FormItem :label="$t('uc.safe.phone')" prop="mobile">-->
+                        <!--                    <Input v-model="formValidate3.mobile" size="large">-->
+                        <!--                      <Select v-model="country" slot="prepend" style="width: 80px;border:1px solid #27313e;">-->
+                        <!--                          <Option v-for="(area,index) in areas" :key="index"  :value="area.zhName" :label="'+' + area.areaCode">-->
+                        <!--                            <span style="text-align:right;display:inline-block;width:30px;">+{{area.areaCode}}</span>-->
+                        <!--                            <span style="text-align:left;display:inline-block;margin-left:10px;color:#ccc;width:80px;" v-if="lang=='简体中文'">{{area.zhName}}</span>-->
+                        <!--                            <span style="text-align:left;display:inline-block;margin-left:10px;color:#ccc;width:80px;" v-else>{{area.enName}}</span>-->
+                        <!--                          </Option>-->
+                        <!--                      </Select>-->
+                        <!--                    </Input>-->
+                        <!--                </FormItem>-->
+                        <!--                &lt;!&ndash; 登录密码 &ndash;&gt;-->
+                        <!--                <FormItem :label="$t('uc.safe.loginpwd')" prop="password">-->
+                        <!--                    <Input v-model="formValidate3.password" size="large" type="password"></Input>-->
+                        <!--                </FormItem>-->
+                        <!--                &lt;!&ndash; 手机验证码 &ndash;&gt;-->
+                        <!--                <FormItem :label="$t('uc.safe.phonecode')" prop="vailCode2">-->
+                        <!--                    <Input v-model="formValidate3.vailCode2" size="large">-->
+                        <!--                    &lt;!&ndash; <Button slot="append">点击获取</Button> &ndash;&gt;-->
+                        <!--                    <div class="timebox" slot="append">-->
+                        <!--                        <Button @click="send(2)" :disabled="sendMsgDisabled2">-->
+                        <!--                            <span v-if="sendMsgDisabled2">{{time2+$t('uc.safe.second')}}</span>-->
+                        <!--                            <span v-if="!sendMsgDisabled2">{{$t('uc.safe.clickget')}}</span>-->
+                        <!--                        </Button>-->
+                        <!--                    </div>-->
+                        <!--                    </Input>-->
+                        <!--                </FormItem>-->
+                        <!--                &lt;!&ndash; Button &ndash;&gt;-->
+                        <!--                <FormItem>-->
+                        <!--                    <Button type="warning" @click="handleSubmit('formValidate3')">{{$t('uc.safe.save')}}</Button>-->
+                        <!--                    <Button @click="handleReset('formValidate3')" style="margin-left: 8px">{{$t('uc.safe.reset')}}</Button>-->
+                        <!--                </FormItem>-->
+                        <!--            </Form>-->
+                        <!--        </div>-->
+                        <!--    </div>-->
+                        <!--</div>-->
                         <!-- 4 -->
                         <div class="account-item">
                             <div class="account-item-in">

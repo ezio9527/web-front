@@ -94,22 +94,22 @@
                   </Submenu>
               </Menu>
             </div>
-            <div class="rightwrapper">
-              <poptip placement="bottom" width="120" class="appdownload" trigger="hover">
-                <a href="javascript:;" style="font-size:14px;">{{$t("header.appdownlaod")}}
-                  <Icon type="md-arrow-dropdown" size="18" />
-                </a>
-                <div class="api" slot="content">
-                  <div class="ios">
-                    <!--<img src="../src/assets/appdownload.png" alt="">-->
-                    <vue-qr :text="androidDownloadUrl" :size="116"></vue-qr>
-                    <div class="tips">
-                      <span>{{$t("header.scandownload")}}</span>
-                    </div>
-                  </div>
-                </div>
-              </poptip>
-            </div>
+            <!--<div class="rightwrapper">-->
+            <!--  <poptip placement="bottom" width="120" class="appdownload" trigger="hover">-->
+            <!--    <a href="javascript:;" style="font-size:14px;">{{$t("header.appdownlaod")}}-->
+            <!--      <Icon type="md-arrow-dropdown" size="18" />-->
+            <!--    </a>-->
+            <!--    <div class="api" slot="content">-->
+            <!--      <div class="ios">-->
+            <!--        &lt;!&ndash;<img src="../src/assets/appdownload.png" alt="">&ndash;&gt;-->
+            <!--        <vue-qr :text="androidDownloadUrl" :size="116"></vue-qr>-->
+            <!--        <div class="tips">-->
+            <!--          <span>{{$t("header.scandownload")}}</span>-->
+            <!--        </div>-->
+            <!--      </div>-->
+            <!--    </div>-->
+            <!--  </poptip>-->
+            <!--</div>-->
             <div class="rr login-container">
               <!-- 判断是否登录 -->
               <!-- 登录 -->
@@ -453,6 +453,7 @@ export default {
     },
     languageValue: function() {
       var curlang = this.$store.getters.lang;
+      console.log(curlang)
       if (curlang == "English") this.$i18n.locale = "en";
       return curlang;
     },

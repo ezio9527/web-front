@@ -909,7 +909,7 @@ module.exports = {
             register: 'Sign Up',
             login: 'Log In',
             welcomelogin: 'Welcome',
-            usertip: 'Enter phone number or email',
+            usertip: 'Enter email',
             pwdtip: 'Enter Password',
             validatecodeload: 'Loading verification code',
             validatemsg: 'Please finish verification first',
