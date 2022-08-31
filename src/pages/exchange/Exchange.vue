@@ -814,7 +814,7 @@
 		overflow: hidden;
 		padding-top: 15px;
 	}
-	
+
 	.trade_bd .panel{
 		height: 276px;
 	}
@@ -2279,21 +2279,21 @@
 							})
 							.append("<span>W1</span>");
 
-						widget
-							.createButton()
-							.attr("title", "M1")
-							.on("click", function() {
-								if ($(this).hasClass("selected")) return;
-								$(this)
-									.addClass("selected")
-									.parent(".group")
-									.siblings(".group")
-									.find(".button.selected")
-									.removeClass("selected");
-								widget.chart().setChartType(1);
-								widget.setSymbol("", "1M");
-							})
-							.append("<span>M1</span>");
+						// widget
+						// 	.createButton()
+						// 	.attr("title", "M1")
+						// 	.on("click", function() {
+						// 		if ($(this).hasClass("selected")) return;
+						// 		$(this)
+						// 			.addClass("selected")
+						// 			.parent(".group")
+						// 			.siblings(".group")
+						// 			.find(".button.selected")
+						// 			.removeClass("selected");
+						// 		widget.chart().setChartType(1);
+						// 		widget.setSymbol("", "1M");
+						// 	})
+						// 	.append("<span>M1</span>");
 					});
 				});
 			},

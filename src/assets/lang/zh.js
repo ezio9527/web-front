@@ -60,7 +60,7 @@
         news: "资讯",
         launchpad: "币火Launchpad",
         b2b: "币火币兑换",
-        community: "社区",
+        community: "邀请",
     },
     sectionPage: {
         ptaqTitle: '平台安全',

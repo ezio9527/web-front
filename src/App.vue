@@ -134,11 +134,11 @@
                           <Icon type="md-swap" /> &nbsp;{{$t("header.trademanage")}}
                         </router-link>
                       </DropdownItem>
-                      <DropdownItem>
-                        <router-link to="/uc/innovation/myorders">
-                          <Icon type="md-swap" /> &nbsp;{{$t("header.innovationmanage")}}
-                        </router-link>
-                      </DropdownItem>
+                      <!--<DropdownItem>-->
+                      <!--  <router-link to="/uc/innovation/myorders">-->
+                      <!--    <Icon type="md-swap" /> &nbsp;{{$t("header.innovationmanage")}}-->
+                      <!--  </router-link>-->
+                      <!--</DropdownItem>-->
                       <DropdownItem>
                         <div @click="logout">
                           <Icon type="md-log-out" /> &nbsp;{{$t("common.logout")}}
@@ -206,9 +206,9 @@
                 <router-link to="/uc/money">
                   <MenuItem name="nav_assets" class="lang-item" style="padding-left:20px!important;">{{$t("header.assetmanage")}}</MenuItem>
                 </router-link>
-                <router-link to="/uc/innovation/myminings">
-                  <MenuItem name="nav_innnovationmanage" class="lang-item" style="padding-left:20px!important;">{{$t("header.innovationmanage")}}</MenuItem>
-                </router-link>
+                <!--<router-link to="/uc/innovation/myminings">-->
+                <!--  <MenuItem name="nav_innnovationmanage" class="lang-item" style="padding-left:20px!important;">{{$t("header.innovationmanage")}}</MenuItem>-->
+                <!--</router-link>-->
             </Submenu>
             <div style="height: 1px;width:100%;background:rgb(59, 69, 85);margin-top:10px;margin-bottom:10px;"></div>
             <Submenu name="lang">
@@ -261,18 +261,18 @@
             <li class="footer_title">
               <span>{{$t("footer.bzzx")}}</span>
             </li>
-            <li>
-              <router-link target="_blank" to="/helplist?cate=4">{{$t("footer.sbsq")}}</router-link>
-            </li>
-            <li>
-              <router-link target="_blank" to="/helplist?cate=0">{{$t("footer.xszn")}}</router-link>
-            </li>
-            <li>
-              <router-link target="_blank" to="/helplist?cate=1">{{$t("footer.cjwt")}}</router-link>
-            </li>
-            <li>
-              <router-link target="_blank" to="/helplist?cate=2">{{$t("footer.jyzn")}}</router-link>
-            </li>
+            <!--<li>-->
+            <!--  <router-link target="_blank" to="/helplist?cate=4">{{$t("footer.sbsq")}}</router-link>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--  <router-link target="_blank" to="/helplist?cate=0">{{$t("footer.xszn")}}</router-link>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--  <router-link target="_blank" to="/helplist?cate=1">{{$t("footer.cjwt")}}</router-link>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--  <router-link target="_blank" to="/helplist?cate=2">{{$t("footer.jyzn")}}</router-link>-->
+            <!--</li>-->
             <li>
               <router-link target="_blank" to="/helplist?cate=3">{{$t("footer.bzzl")}}</router-link>
             </li>
@@ -383,22 +383,22 @@ export default {
     activeNav: function() {
       switch (this.activeNav) {
         case "nav-exchange":
-          window.document.title = (this.lang == "简体中文" ? "交易中心" : "Exchange") + " - Bihuo | Bihuo | Global currency trading platform | global digital currency trading platform";
+          window.document.title = (this.lang == "简体中文" ? "Exchange" : "Exchange") + " - Bihuo | Bihuo | Global currency trading platform | global digital currency trading platform";
           break;
         case "nav-service":
-          window.document.title = (this.lang == "简体中文" ? "公告" : "Announcement") + " - Bihuo | Bihuo | Global currency trading platform | global digital currency trading platform";
+          window.document.title = (this.lang == "简体中文" ? "Announcement" : "Announcement") + " - Bihuo | Bihuo | Global currency trading platform | global digital currency trading platform";
           break;
         case "nav-about":
-          window.document.title = (this.lang == "简体中文" ? "关于" : "About") + " - Bihuo | Bihuo | Global currency trading platform | global digital currency trading platform";
+          window.document.title = (this.lang == "简体中文" ? "About" : "About") + " - Bihuo | Bihuo | Global currency trading platform | global digital currency trading platform";
           break;
         case "nav-lab":
-          window.document.title = (this.lang == "简体中文" ? "创新实验室" : "Lab") + " - Bihuo | Bihuo | Global currency trading platform | global digital currency trading platform";
+          window.document.title = (this.lang == "简体中文" ? "Lab" : "Lab") + " - Bihuo | Bihuo | Global currency trading platform | global digital currency trading platform";
           break;
         case "nav-invite":
-          window.document.title = (this.lang == "简体中文" ? "推广合伙人" : "Promotion") + " - Bihuo | Bihuo | Global currency trading platform | global digital currency trading platform";
+          window.document.title = (this.lang == "简体中文" ? "Promotion" : "Promotion") + " - Bihuo | Bihuo | Global currency trading platform | global digital currency trading platform";
           break;
 	case "nav-cexchange":
-          window.document.title = (this.lang == "简体中文" ? "活动" : "Activity") + " - Bihuo | Global currency trading platform | global digital currency trading platform";
+          window.document.title = (this.lang == "简体中文" ? "Activity" : "Activity") + " - Bihuo | Global currency trading platform | global digital currency trading platform";
           break;
         default:
           window.document.title = "Bihuo | Bihuo Home  - global high-quality digital assets | open trading platform trading journey";

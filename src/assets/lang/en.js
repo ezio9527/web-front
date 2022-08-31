@@ -64,7 +64,7 @@ module.exports = {
         news: "News",
         launchpad: "Bihuo Launchpad",
         b2b: "Bihuo Exchange",
-        community: "Community",
+        community: "Invitation",
     },
     sectionPage: {
         ptaqTitle: 'Platform Security',

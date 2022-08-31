@@ -242,7 +242,7 @@
           </div>
           <div class="table swap-my-account">
             <div class="account-item" style="margin-top: 20px;">
-              <div style="width:35%;" >{{$t("swap.accountmode")}}</div>     
+              <div style="width:35%;" >{{$t("swap.accountmode")}}</div>
               <div class="mode" style="width: 65%;">
                 <Button @click="showMarginModeModal()" v-if="marginMode === '1'" size="small">{{$t("swap.marginMode1")}}</Button>
                 <Button @click="showMarginModeModal()" v-if="marginMode === '0'" size="small">{{$t("swap.marginMode2")}}</Button>
@@ -981,10 +981,10 @@ export default {
             render: (h, params) => {
               if(params.row.status != "ENTRUST_CANCEL") {
                 if(params.row.entrustType == "OPEN"){
-                  return h("span", {}, params.row.openFee);  
+                  return h("span", {}, params.row.openFee);
                 }
                 if(params.row.entrustType == "CLOSE"){
-                  return h("span", {}, params.row.closeFee);  
+                  return h("span", {}, params.row.closeFee);
                 }
               }else{
                 return h("span", {}, "--");
@@ -1624,21 +1624,21 @@ export default {
             })
             .append("<span>W1</span>");
 
-          widget
-            .createButton()
-            .attr("title", "M1")
-            .on("click", function() {
-              if ($(this).hasClass("selected")) return;
-              $(this)
-                .addClass("selected")
-                .parent(".group")
-                .siblings(".group")
-                .find(".button.selected")
-                .removeClass("selected");
-              widget.chart().setChartType(1);
-              widget.setSymbol("", "1M");
-            })
-            .append("<span>M1</span>");
+          // widget
+          //   .createButton()
+          //   .attr("title", "M1")
+          //   .on("click", function() {
+          //     if ($(this).hasClass("selected")) return;
+          //     $(this)
+          //       .addClass("selected")
+          //       .parent(".group")
+          //       .siblings(".group")
+          //       .find(".button.selected")
+          //       .removeClass("selected");
+          //     widget.chart().setChartType(1);
+          //     widget.setSymbol("", "1M");
+          //   })
+          //   .append("<span>M1</span>");
         });
       });
     },
@@ -2525,7 +2525,7 @@ $night-color: #fff;
     display: flex;
     margin-top: 5px;
     .left {
-      
+
       border-radius: 0px;
       margin-right: 5px;
       overflow:hidden;
