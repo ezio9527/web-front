@@ -124,7 +124,7 @@
             init(page){
                  let memberId = 0;
                 !this.$store.getters.isLogin && this.$router.push('/login');
-                this.$store.getters.isLogin && (memberId = this.$store.getters.member.id); 
+                this.$store.getters.isLogin && (memberId = this.$store.getters.member.id);
                 let startTime = "";
                 let endTime = "";
                 let url = this.api.uc.mylist;
@@ -152,18 +152,18 @@
             },
             dateform(time){
                 var date = new Date(time);
-                var y = date.getFullYear();  
-                var m = date.getMonth() + 1;  
-                m = m < 10 ? ('0' + m) : m;  
-                var d = date.getDate();  
-                d = d < 10 ? ('0' + d) : d;  
+                var y = date.getFullYear();
+                var m = date.getMonth() + 1;
+                m = m < 10 ? ('0' + m) : m;
+                var d = date.getDate();
+                d = d < 10 ? ('0' + d) : d;
                 var h = date.getHours();
                 h = h < 10 ? ('0' + h) : h;
                 var minute = date.getMinutes();
                 var second = date.getSeconds();
-                minute = minute < 10 ? ('0' + minute) : minute;  
-                second = second < 10 ? ('0' + second) : second; 
-                return y + '-' + m + '-' + d+' '+h+':'+minute+':'+second; 
+                minute = minute < 10 ? ('0' + minute) : minute;
+                second = second < 10 ? ('0' + second) : second;
+                return y + '-' + m + '-' + d+' '+h+':'+minute+':'+second;
             },
             changePage(pageindex) {
                 this.init(pageindex);
@@ -171,7 +171,7 @@
             queryOrder(){
                 let rangedate = "";
                 if (this.rangeDate.length == 0) {
-                    this.$Message.error("请选择搜索日期范围");
+                    this.$Message.error("Please select a search date range");
                     return;
                 }else {
                     try {
@@ -179,7 +179,7 @@
                         rangedate += "~";
                         rangedate += this.rangeDate[1].getFullYear() + "-" + (this.rangeDate[1].getMonth() + 1) + "-" + this.rangeDate[1].getDate();
                     }catch(ex) {
-                        this.$Message.error("请选择搜索日期范围");
+                        this.$Message.error("Please select a search date range");
                         return;
                     }
                 }
@@ -188,7 +188,7 @@
                 rangedate && (date = rangedate.split("~"));
                 let memberId = 0;
                 !this.$store.getters.isLogin && this.$router.push('/login');
-                this.$store.getters.isLogin && (memberId = this.$store.getters.member.id); 
+                this.$store.getters.isLogin && (memberId = this.$store.getters.member.id);
                 let url = this.api.uc.mylist;
                 let startTime = new Date(date[0]).getTime(),
                     endTime = new Date(date[1]).getTime(),
@@ -207,7 +207,7 @@
                         this.$Message.error(res.body.message);
                     }
                 });
-               
+
             },
             getList(pageNo) {
                 //获取tableWithdraw

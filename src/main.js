@@ -8,6 +8,7 @@ import VueRouter from 'vue-router';
 import vueResource from 'vue-resource';
 import VueI18n from 'vue-i18n';
 import iView from 'iview';
+import locale from 'iview/dist/locale/en-US';
 import 'iview/dist/styles/iview.css';
 import util from './assets/js/util.js';
 import 'swiper/dist/css/swiper.css';
@@ -17,7 +18,7 @@ import Api from './config/api';
 import $ from '@js/jquery.min.js';
 var moment = require('moment');
 
-Vue.use(iView);
+Vue.use(iView,{ locale });
 Vue.use(VueClipboard);
 Vue.use(VueRouter);
 Vue.use(vueResource);
@@ -35,7 +36,8 @@ Vue.http.options.credentials = true;
 Vue.http.options.emulateJSON = true;
 Vue.http.options.headers = {
     // 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-    'Content-Type': 'application/json;charset=utf-8'
+    'Content-Type': 'application/json;charset=utf-8',
+    'Accept-Language': 'en-US'
 };
 
 const router = new VueRouter({

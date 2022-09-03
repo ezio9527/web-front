@@ -1493,7 +1493,7 @@ export default {
               widget.chart().setChartType(3);
               widget.setSymbol("", "1");
             })
-            .append("<span>分时</span>");
+            .append("<span>Time</span>");
 
           widget
             .createButton()

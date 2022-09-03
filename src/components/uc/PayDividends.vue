@@ -190,7 +190,7 @@ export default {
         this.$store.state.lang == "English" &&
           this.$Message.error("Please select a search date range");
         this.$store.state.lang != "English" &&
-          this.$Message.error("请选择搜索日期范围");
+          this.$Message.error("Please select a search date range");
         return;
       } else {
         try {
@@ -211,7 +211,7 @@ export default {
           this.$store.state.lang == "English" &&
             this.$Message.error("Please select a search date range");
           this.$store.state.lang != "English" &&
-            this.$Message.error("请选择搜索日期范围");
+            this.$Message.error("Please select a search date range");
           return;
         }
       }

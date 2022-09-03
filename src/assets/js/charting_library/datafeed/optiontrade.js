@@ -21,7 +21,7 @@ WebsockFeed.prototype.onReady=function(callback){
 
     $("#"+window.tvWidget.id).contents().on("click",".date-range-list>a",function(){
       if (window.tvWidget) {
-        if ($(this).html() == "分时") {
+        if ($(this).html() == "Time") {
           $(this).parent().addClass("real-op").removeClass("common-op");
           window.tvWidget.chart().setChartType(3);
         }else {

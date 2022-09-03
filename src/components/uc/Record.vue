@@ -182,14 +182,14 @@ export default {
     },
     queryOrder() {
       if (this.rangeDate.length == 0) {
-        this.$Message.error("请选择搜索日期范围");
+        this.$Message.error("Please select a search date range");
         return;
       } else {
         try {
           this.page=1;
           this.getList(this.page);
         } catch (ex) {
-          this.$Message.error("请选择搜索日期范围");
+          this.$Message.error("Please select a search date range");
           return;
         }
       }

@@ -38,7 +38,7 @@ WebsockFeed.prototype.onReady=function(callback){
 
     $("#"+window.tvWidget.id).contents().on("click",".date-range-list>a",function(){
       if (window.tvWidget) {
-        if ($(this).html() == "分时") {
+        if ($(this).html() == "Time") {
           $(this).parent().addClass("real-op").removeClass("common-op");
           window.tvWidget.chart().setChartType(3);
         }else {
@@ -55,7 +55,7 @@ WebsockFeed.prototype.onReady=function(callback){
 
 WebsockFeed.prototype.subscribeBars = function(symbolInfo, resolution, onRealtimeCallback, listenerGUID, onResetCacheNeededCallback) {
     var that = this;
-	
+
     this.stompClient.subscribe('/topic/market/trade/'+symbolInfo.name, function(msg) {
         var resp = JSON.parse(msg.body);
         if(that.lastBar != null && resp.length > 0){
@@ -77,7 +77,7 @@ WebsockFeed.prototype.subscribeBars = function(symbolInfo, resolution, onRealtim
 				amount = 0;
 			}
 			that.lastBar.volume = amount;
-			
+
             // console.log(JSON.stringify(resp))
             // console.log(resp)
             if(price > that.lastBar.high){
@@ -120,7 +120,7 @@ WebsockFeed.prototype.subscribeBars = function(symbolInfo, resolution, onRealtim
         if(resolution == "1D" && resp.period != "1day") return;
         if(resolution == "1W" && resp.period != "1week") return;
         if(resolution == "1M" && resp.period != "1mon") return;
-        
+
         var newTime = resp.time*1000;
         if(newTime - that.currentBar.time > 0 && newTime - that.currentBar.time < 86400000){
             that.lastBar = {time:resp.time*1000, open:resp.openPrice, high:resp.highestPrice, low:resp.lowestPrice, close:resp.closePrice, volume:resp.volume};
