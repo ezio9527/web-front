@@ -4,8 +4,9 @@
     <div class="header">
       <div class="invite-title">
         <div class="my-link-text">{{$t('invite.myinvitelink')}}：</div>
-        <div class="my-link-content">{{myInfo.inviteLink}}</div>
-        <a class="copy-button" v-clipboard:copy="myInfo.inviteLink" v-clipboard:success="onCopy" v-clipboard:error="onError" href="javascript:;">{{$t('invite.copy')}}</a>
+        <div class="my-link-content">{{$t('invite.myinvitelink2')}}</div>
+        <a href="/helplist?cate=3" style="line-height: 38px;margin-left: 20px;">{{$t('invite.myinvitelink3')}}</a>
+        <!--<a class="copy-button" v-clipboard:copy="myInfo.inviteLink" v-clipboard:success="onCopy" v-clipboard:error="onError" href="javascript:;">{{$t('invite.copy')}}</a>-->
       </div>
       <!--<div class="invite-detail">-->
       <!--  <div class="item">-->
@@ -33,14 +34,14 @@
       <!--  <qriously :value="myInfo.inviteLink" :size="140" foreground="#000" />-->
       <!--</div>-->
 
-      <div class="mask" v-if="!isLogin">
-        <div class="login-btn">
-              <ButtonGroup size="large">
-                  <Button type="warning" to="/login">{{$t("common.login")}}</Button>
-                  <Button type="warning" to="/register">{{$t("common.register")}}</Button>
-              </ButtonGroup>
-        </div>
-      </div>
+      <!--<div class="mask" v-if="!isLogin">-->
+      <!--  <div class="login-btn">-->
+      <!--        <ButtonGroup size="large">-->
+      <!--            <Button type="warning" to="/login">{{$t("common.login")}}</Button>-->
+      <!--            <Button type="warning" to="/register">{{$t("common.register")}}</Button>-->
+      <!--        </ButtonGroup>-->
+      <!--  </div>-->
+      <!--</div>-->
     </div>
     <!--<p class="headertip">* {{$t('invite.headertip')}}</p>-->
     <!--<div class="main">-->
@@ -678,7 +679,7 @@ export default {
       height: 180px;
       text-align: center;
       .login-btn{
-        width: 150px;
+        width: 200px;
         height: 35px;
         line-height: 35px;
         border-radius: 3px;

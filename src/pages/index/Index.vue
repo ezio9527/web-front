@@ -248,8 +248,6 @@ export default {
       yesDayCashDividensBonusETH: 0,
       CNYRate: null,
       dataIndex: [],
-      pageNo: 1,
-      totalNum: 0,
       searchKey: "",
       favorColumns: [
         {

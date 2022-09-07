@@ -60,7 +60,7 @@
         news: "资讯",
         launchpad: "币火Launchpad",
         b2b: "币火币兑换",
-        community: "邀请",
+        community: "申购",
     },
     sectionPage: {
         ptaqTitle: '平台安全',
@@ -818,7 +818,9 @@
         times: "倍"
     },
     invite: {
-        myinvitelink: "我的邀请链接",
+        myinvitelink: "订阅日期",
+        myinvitelink2: "开始时间 2022年7月 结束时间 2022年12月1日",
+        myinvitelink3: "TBH资料信息",
         copy: "复制",
         copyed: "已复制",
         mylevelone: "我的一级好友",

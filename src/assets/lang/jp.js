@@ -816,6 +816,8 @@ module.exports = {
             },
             invite: {
                 myinvitelink: "私の招待リンク",
+                myinvitelink2: "start In July 2022 end December 1, 2022",
+                myinvitelink3: "TBH information",
                 copy: "コピー",
                 copyed: "コピーしました",
                 mylevelone: "私の一級の友達",

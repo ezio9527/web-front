@@ -64,7 +64,7 @@ module.exports = {
         news: "News",
         launchpad: "Bihuo Launchpad",
         b2b: "Bihuo Exchange",
-        community: "Invitation",
+        community: "Purchase",
     },
     sectionPage: {
         ptaqTitle: 'Platform Security',
@@ -815,7 +815,9 @@ module.exports = {
         times: "times"
     },
     invite: {
-        myinvitelink: "Promotion Link",
+        myinvitelink: "Subscribe to date",
+        myinvitelink2: "start In July 2022 end December 1, 2022",
+        myinvitelink3: "TBH information",
         copy: "Copy",
         copyed: "Copied",
         mylevelone: "Level one friends",

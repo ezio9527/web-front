@@ -60,7 +60,7 @@ module.exports = {
                 news: "資訊",
                 launchpad: "幣火Launchpad",
                 b2b: "幣火幣兌換",
-                community: "社區",
+                community: "申购",
             },
             sectionPage: {
                 ptaqTitle: "平台安全",
@@ -807,7 +807,9 @@ module.exports = {
                 times: "倍"
             },
             invite: {
-                myinvitelink: "我的邀請鏈接",
+                myinvitelink: "訂閱日期",
+                myinvitelink2: "開始時間 2022年7月 結束時間 2022年12月1日",
+                myinvitelink3: "TBH资料信息",
                 copy: "複製",
                 copyed: "已復制",
                 mylevelone: "我的一級好友",
